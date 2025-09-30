@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CureHub - صحتك أولويتنا</title>
+  <style>
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #00a896;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #028090;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .promo {
+      background: #fdfcdc;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .product h3 { color: #028090; }
+    .cart {
+      background: #f0efeb;
+      padding: 20px;
+    }
+    .cart ul { list-style: none; padding: 0; }
+    .cart li { margin: 8px 0; }
+    button {
+      background: #00a896;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover { background: #028090; }
+    footer {
+      background: #00a896;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    .offer {
+      background: #ffd166;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> CureHub </h1>
+    <p> صحتك أولويتنا، وجودتك مسؤوليتنا </p>
+  </header>
+
+  <nav>
+    <a href="#products">الأدوية</a>
+    <a href="#cart">السلة</a>
+    <a href="#offers">العروض</a>
+  </nav>
+
+  <section class="promo">
+    <p>صحتك أمانة عندنا، واخترنا لك أفضل الأدوية بجودة عالية.</p>
+    <p>استفد من عروضنا الموسمية واهتم بصحتك بأقل التكاليف.</p>
+    <p>نوفر لك توصيل سريع وآمن حتى باب منزلك.</p>
+    <p>كل ما تحتاجه من دواء متوفر بسهولة وبطريقة مضمونة.</p>
+  </section>
+
+  <section id="offers" class="offer">
+    🎉 عروض فصل ربيع : خصم %20 على جميع الأدوية!
+  </section>
+
+  <section id="products" class="products">
+    <div class="product">
+      <img src="https://bf1af2.akinoncloudcdn.com/products/2024/09/12/73194/d8808c9c-49b3-42ae-ad13-24bf56787cd0_size1080_cropCenter.jpg" alt="باراسيتامول">
+      <h3>باراسيتامول</h3>
+      <p>50 درهم</p>
+      <button onclick="addToCart('باراسيتامول', 50)">أضف للسلة</button>
+    </div>
+    <div class="product">
+      <img src="https://barakat-pharma.com/wp-content/uploads/2019/09/all_0056_Amoxicillin.jpg" alt="أموكسيسيلين">
+      <h3>أموكسيسيلين</h3>
+      <p>80 درهم</p>
+      <button onclick="addToCart('أموكسيسيلين', 80)">أضف للسلة</button>
+    </div>
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiNAAU0G7clTZ0-xIAIT_yH3hrNHD3Ad7_xtk-rxhJJSQKvHNl2zdv8be4&s=1" alt="فيتامين C">
+      <h3>فيتامين C</h3>
+      <p>40 درهم</p>
+      <button onclick="addToCart('فيتامين C', 40)">أضف للسلة</button>
+    </div>
+    <div class="product">
+      <img src="https://cdn.salla.sa/QdDpq/D8T2ilBVl7iy66W3pPGSk8zT3P329OWvH8UCL8Hm.jpg" alt="مسكن ألم">
+      <h3>مسكن ألم</h3>
+      <p>30 درهم</p>
+      <button onclick="addToCart('مسكن ألم', 30)">أضف للسلة</button>
+    </div>
+    <div class="product">
+      <img src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nau/nau62891/l/24.jpg" alt="مكمل غذائي">
+      <h3> مكمل غذائي </h3>
+      <p>120 درهم</p>
+      <button onclick="addToCart('مكمل غذائي', 120)">أضف للسلة</button>
+    </div>
+    <div class="product">
+      <img src="https://www.binsina.ae/media/catalog/product/5/1/51846_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=600&width=600&canvas=600:600" alt="أوميجا 3">
+      <h3>أوميجا 3</h3>
+      <p>90 درهم</p>
+      <button onclick="addToCart('أوميجا 3', 90)">أضف للسلة</button>
+    </div>
+    <div class="product">
+      <img src="https://chefaa.com/blog/wp-content/uploads/2021/04/-e1617632548769.webp" alt="مضاد حموضة">
+      <h3>مضاد حموضة</h3>
+      <p>35 درهم</p>
+      <button onclick="addToCart('مضاد حموضة', 35)">أضف للسلة</button>
+    </div>
+    <div class="product">
+      <img src="https://www.binsina.ae/media/catalog/product/4/5/45549_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=600&width=600&canvas=600:600" alt="بخاخ أنف">
+      <h3>بخاخ أنف</h3>
+      <p>70 درهم</p>
+      <button onclick="addToCart('بخاخ أنف', 70)">أضف للسلة</button>
+    </div>
+    <div class="product">
+      <img src="https://lifeadmin-app.s3.me-south-1.amazonaws.com/EcomApp/products/aNwar%201/110614-01.jpg" alt="شراب سعال">
+      <h3>شراب سعال</h3>
+      <p>45 درهم</p>
+      <button onclick="addToCart('شراب سعال', 45)">أضف للسلة</button>
+    </div>
+    <div class="product">
+      <img src="https://media.zid.store/4e24910d-e706-4e18-a65f-fdb5b376262a/8e1438e9-b475-4435-99c1-2c3b5def2547.png" alt="مضاد حساسية">
+      <h3>مضاد حساسية</h3>
+      <p>60 درهم</p>
+      <button onclick="addToCart('مضاد حساسية', 60)">أضف للسلة</button>
+    </div>
+    <div class="product">
+      <img src="https://www.alkhaleej.ae/sites/default/files/styles/d06_standard/public/migrated/fc257dac-7d9b-436b-9392-bf68455e85e9.jpg.webp" alt="مضاد اكتئاب">
+      <h3>مضاد اكتئاب</h3>
+      <p>150 درهم</p>
+      <button onclick="addToCart('مضاد اكتئاب', 150)">أضف للسلة</button>
+    </div>
+    <div class="product">
+      <img src="https://cpimg.tistatic.com/09379567/b/4/Insulin-Aspart-Injection.jpg" alt="أنسولين">
+      <h3>أنسولين</h3>
+      <p>200 درهم</p>
+      <button onclick="addToCart('أنسولين', 200)">أضف للسلة</button>
+    </div>
+  </section>
+
+  <section id="cart" class="cart">
+    <h2>🛒 السلة</h2>
+    <ul id="cart-items"></ul>
+    <p id="total">الإجمالي: 0 درهم</p>
+    <button onclick="checkout()">متابعة الدفع</button>
+  </section>
+
+  <footer>
+    <p>© 2025 CureHub - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script>
+    let cart = [];
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      displayCart();
+    }
+    function displayCart() {
+      const list = document.getElementById('cart-items');
+      list.innerHTML = "";
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        list.innerHTML += `<li>${item.name} - ${item.price} درهم 
+          <button onclick="removeFromCart(${index})">حذف</button></li>`;
+      });
+      document.getElementById('total').textContent = "الإجمالي: " + total + " درهم";
+    }
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      displayCart();
+    }
+    function checkout() {
+      if (cart.length === 0) {
+        alert("سلتك فارغة.");
+      } else {
+        alert("🚚 تم تأكيد طلبك وسيتم التواصل معك بخصوص الدفع والتوصيل.");
+      }
+    }
+  </script>
+
+</body>
+</html>
